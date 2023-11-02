@@ -1,0 +1,66 @@
+.bg-wrapper {
+  background-repeat: no-repeat;
+  background-position: right top;
+  background-image: url("../img/hero-bg.svg");
+  background-color: #edf3f8;
+}
+
+.header {
+  padding-top: 56px;
+  background: transparent;
+}
+.header__container {
+  display: flex;
+  align-items: center;
+}
+
+.header__list {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  margin-left: 64px;
+}
+
+.header__link {
+  color: var(--S-SanJuanBlue);
+  font-family: "Public Sans";
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.header__menu {
+  margin-left: auto;
+}
+
+.header__btn {
+  @include P-btn;
+}
+
+.header__menu_btn {
+  display: none;
+  width: 28px;
+  height: 17px;
+  background-repeat: no-repeat;
+  background: transparent;
+  background-image: url("../img/burger-menu.svg");
+  cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+  .bg-wrapper {
+    background-image: url("../img/hero-bg2.svg");
+    background-position: center top;
+  }
+}
+
+@media screen and (max-width: 740px) {
+  .header__nav {
+    display: none;
+  }
+  .header__btn {
+    display: none;
+  }
+  .header__menu_btn {
+    display: inline-block;
+  }
+}

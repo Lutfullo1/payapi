@@ -1,0 +1,115 @@
+.hero {
+  padding: 152px 0;
+}
+
+.hero__container {
+  display: flex;
+  align-items: center;
+  gap: 200px;
+}
+
+.hero__content {
+  max-width: 582px;
+}
+
+.hero__title {
+  @include h1-large;
+  margin-bottom: 21px;
+}
+
+.hero__form {
+  max-width: 445px;
+  position: relative;
+  margin-bottom: 16px;
+}
+
+.hero__input {
+  border-radius: 24px;
+  background-color: #fbfcfe;
+  box-shadow: 10px 10px 25px -10px rgba(54, 83, 107, 0.25);
+  padding: 16px 143px 14px 27px;
+  color: var(--S-SanJuanBlue);
+  font-family: "Public Sans", sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  border: none;
+  outline: none;
+
+  &::placeholder {
+    color: var(--S-SanJuanBlue);
+  }
+}
+
+.hero__btn {
+  position: absolute;
+  top: 0;
+  right: 60px;
+  @include P-btn;
+}
+
+.hero__text {
+  color: var(--S-LightHuanBlue);
+  font-family: "Public Sans", sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  margin-left: 27px;
+}
+
+.hero__link {
+  color: var(--S-LightHuanBlue);
+  font-family: "Public Sans", sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+@media screen and (max-width: 1296px) {
+  .hero__container {
+    gap: 100px;
+  }
+}
+
+@media screen and (max-width: 1110px) {
+  .hero__btn {
+    right: 0;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .hero {
+    padding: 70px 0 100px 0;
+  }
+  .hero__container {
+    flex-direction: column-reverse;
+  }
+  .hero__img {
+    max-width: 290px;
+    margin: 0 auto;
+  }
+  .hero__content {
+    text-align: center;
+  }
+  .hero__btn {
+    right: 35px;
+  }
+  .hero__form {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media screen and (max-width: 506px) {
+  .hero__input {
+    width: 100%;
+  }
+  .hero__btn {
+    width: 100%;
+    position: static;
+    margin-top: 16px;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .hero__img {
+    max-width: 150px;
+  }
+}

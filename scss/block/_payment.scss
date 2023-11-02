@@ -1,0 +1,122 @@
+.payment {
+  background-color: #edf3f8;
+  padding-bottom: 96px;
+}
+
+.payment__list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin-bottom: 96px;
+}
+
+.payment__item {
+  max-width: 350px;
+  text-align: center;
+
+  &::before {
+    content: "";
+    display: inline-block;
+    width: 106px;
+    height: 106px;
+    background-repeat: no-repeat;
+    background-image: url("../img/payment1.svg");
+    margin-bottom: 32px;
+  }
+}
+
+.payment__title {
+  @include h3-small;
+  margin-bottom: 16px;
+  text-align: center;
+}
+
+.payment__text {
+  color: #6c8294;
+  text-align: center;
+  font-family: "Public Sans", sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 25px;
+  letter-spacing: -0.115px;
+}
+
+.payment__contact {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.payment__contact_title {
+  @include h2;
+}
+
+.payment__form {
+  max-width: 445px;
+  position: relative;
+}
+
+.payment__input {
+  border-radius: 24px;
+  background-color: #fbfcfe;
+  box-shadow: 10px 10px 25px -10px rgba(54, 83, 107, 0.25);
+  padding: 16px 143px 14px 27px;
+  color: var(--S-SanJuanBlue);
+  font-family: "Public Sans", sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  border: none;
+  outline: none;
+
+  &::placeholder {
+    color: var(--S-SanJuanBlue);
+  }
+}
+
+.payment__btn {
+  position: absolute;
+  top: 0;
+  right: 0px;
+  @include P-btn;
+}
+
+@media screen and (max-width: 1035px) {
+  .payment__contact_title {
+    margin-bottom: 40px;
+  }
+  .payment__contact {
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .payment__list {
+    place-items: center;
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+
+  .payment__item {
+    max-width: 100%;
+  }
+}
+
+@media screen and (max-width: 791px) {
+  .payment__form {
+    flex-direction: column;
+  }
+
+  .payment__input {
+    width: 100%;
+  }
+  .payment__btn {
+    position: static;
+    width: 100%;
+    margin-top: 16px;
+  }
+}
+
+@media screen and (max-width: 396px) {
+  .payment__contact_title {
+    font-size: 35px;
+  }
+}
